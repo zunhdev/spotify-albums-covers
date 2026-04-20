@@ -1,0 +1,62 @@
+{
+  "languages": {
+    "TypeScript": {
+      "language_servers": ["oxlint", "!eslint", "..."],
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt"
+          }
+        },
+        {
+          "code_action": "source.fixAll.oxc"
+        }
+      ]
+    },
+    "JSON": {
+      "language_servers": ["json-language-server", "..."],
+      "format_on_save": "on",
+      "formatter": {
+        "language_server": {
+          "name": "oxfmt"
+        }
+      }
+    },
+    "JSONC": {
+      "language_servers": ["json-language-server", "..."],
+      "format_on_save": "on",
+      "formatter": {
+        "language_server": {
+          "name": "oxfmt"
+        }
+      }
+    }
+  },
+  "lsp": {
+    "oxlint": {
+      "initialization_options": {
+        "settings": {
+          "disableNestedConfig": false,
+          "fixKind": "safe_fix",
+          "run": "onType",
+          "typeAware": false,
+          "unusedDisableDirectives": "deny"
+        }
+      }
+    },
+    "oxfmt": {
+      "initialization_options": {
+        "settings": {
+          "configPath": null,
+          "flags": {},
+          "fmt.configPath": null,
+          "fmt.experimental": true,
+          "run": "onSave",
+          "typeAware": false,
+          "unusedDisableDirectives": false
+        }
+      }
+    }
+  }
+}

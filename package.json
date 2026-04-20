@@ -1,0 +1,29 @@
+{
+  "name": "spotify_covers",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "bun run src/main.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "lint": "oxlint src tests",
+    "lint:fix": "oxlint --fix src tests",
+    "format": "oxfmt --write \"src/**/*.ts\" \"tests/**/*.ts\" \"*.json\" \".zed/**/*.json\"",
+    "format:check": "oxfmt --check \"src/**/*.ts\" \"tests/**/*.ts\" \"*.json\" \".zed/**/*.json\"",
+    "check": "bun run typecheck && bun run lint && bun run format:check && bun test",
+    "taze:check": "taze major --include-locked",
+    "taze:upgrade:all": "taze major --write --include-locked",
+    "taze:upgrade:safe": "taze --write"
+  },
+  "dependencies": {
+    "dotenv": "17.4.2",
+    "envalid": "8.1.1"
+  },
+  "devDependencies": {
+    "@types/bun": "1.3.12",
+    "oxfmt": "0.45.0",
+    "oxlint": "1.60.0",
+    "taze": "19.11.0",
+    "typescript": "6.0.3"
+  }
+}
