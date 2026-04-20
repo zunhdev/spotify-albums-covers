@@ -1,5 +1,7 @@
 # Spotify Covers
 
+[![CI](https://github.com/Droidion/spotify-albums-covers/actions/workflows/ci.yml/badge.svg)](https://github.com/Droidion/spotify-albums-covers/actions/workflows/ci.yml)
+
 A local Bun CLI that prints Spotify album cover image URLs for a Spotify artist.
 It fetches the artist's albums, keeps primary-artist album releases, deduplicates
 common duplicate listings, classifies likely live albums, and prints studio and
